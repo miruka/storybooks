@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/materialize/css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <title>StoryBooks</title>
+</head>
+
+<body>
+    {{> _header}}
+    {{> _add_btn}}
+
+    <div class="container">
+
+        {{{body}}}
+
+    </div>
+
+
+</body>
+
+
+
+
+
+
+
+
+<script src="/materialize/js/materialize.min.js"></script>
+
+<script src="/ckeditor_4.14.1_standard/ckeditor/ckeditor.js"></script>
+
+<script>
+    M.Sidenav.init(document.querySelector('.sidenav'))
+    M.FormSelect.init(document.querySelector('#status'))
+
+    CKEDITOR.replace('body', {
+        plugins: 'wysiwygarea, toolbar, basicstyles, link'
+    })
+</script>
+
+
+
+</body>
+
+</html>
